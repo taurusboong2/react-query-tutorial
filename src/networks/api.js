@@ -15,3 +15,8 @@ export const RQfetchHeroes = async () => {
   const response = await axios.get(BASE_URL);
   return response;
 };
+
+export const fetchHeroById = async id => {
+  const response = await axios.get(`${BASE_URL}/${id}`);
+  return response;
+};

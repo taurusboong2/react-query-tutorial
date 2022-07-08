@@ -14,6 +14,22 @@
       "id": 3,
       "name": "Wonder Woman",
       "alterEgo": "Princess Diana"
+    },{
+      "id": 4,
+      "name": "Aqua Man",
+      "alterEgo": "Arthur Curry"
+    },{
+      "id": 5,
+      "name": "Flash",
+      "alterEgo": "Arthur Curry"
+    },{
+      "id": 6,
+      "name": "Aqua Man",
+      "alterEgo": "Bartholomew Henry"
+    },{
+      "id": 7,
+      "name": "Cyborg",
+      "alterEgo": "Victor Stone"
     }
   ]
 }
