@@ -25,3 +25,13 @@ export const RQfetchFriends = async () => {
   const response = await axios.get(`http://localhost:4000/friends`);
   return response;
 };
+
+export const fetchUserByEmail = async id => {
+  const response = await axios.get(`http://localhost:4000/users/${id}`);
+  return response;
+};
+
+export const fetchStacksByUserName = async id => {
+  const response = await axios.get(`http://localhost:4000/stacks/${id}`);
+  return response;
+};

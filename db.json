@@ -22,14 +22,6 @@
       "id": 5,
       "name": "Flash",
       "alterEgo": "Arthur Curry"
-    },{
-      "id": 6,
-      "name": "Aqua Man",
-      "alterEgo": "Bartholomew Henry"
-    },{
-      "id": 7,
-      "name": "Cyborg",
-      "alterEgo": "Victor Stone"
     }
   ],
   "friends" : [
@@ -42,6 +34,18 @@
     },{
       "id" : 3,
       "name" : "권율"
+    }
+  ],
+  "users" : [
+    {
+      "id": "aaa",
+      "username" : "TauBoong"
+    }
+  ],
+  "stacks" : [
+    {
+      "id": "TauBoong",
+      "stacks": ["react", "JS", "TS"]
     }
   ]
 }
