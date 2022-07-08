@@ -1,13 +1,16 @@
 import React from 'react';
 import { BrowserRouter, Route, Link, Routes } from 'react-router-dom';
+import { QueryClientProvider, QueryClient } from 'react-query';
 import './App.css';
 import { HomePage } from './components/Home.page';
 import { RQSuperHeroesPage } from './components/RQSuperHeroes.page';
 import { SuperHeroesPage } from './components/SuperHeroes.page';
 
-function App() {
+const queryClient = new QueryClient();
+
+const App = () => {
   return (
-    <>
+    <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <div>
           <nav>
@@ -31,8 +34,8 @@ function App() {
           <Route path="/rq-super-heroes" element={<RQSuperHeroesPage />} />
         </Routes>
       </BrowserRouter>
-    </>
+    </QueryClientProvider>
   );
-}
+};
 
 export default App;
