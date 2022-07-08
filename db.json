@@ -31,5 +31,17 @@
       "name": "Cyborg",
       "alterEgo": "Victor Stone"
     }
+  ],
+  "friends" : [
+    {
+      "id" : 1,
+      "name" : "이순신"
+    },{
+      "id" : 2,
+      "name" : "김좌진"
+    },{
+      "id" : 3,
+      "name" : "권율"
+    }
   ]
 }

@@ -20,3 +20,8 @@ export const fetchHeroById = async id => {
   const response = await axios.get(`${BASE_URL}/${id}`);
   return response;
 };
+
+export const RQfetchFriends = async () => {
+  const response = await axios.get(`http://localhost:4000/friends`);
+  return response;
+};
