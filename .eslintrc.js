@@ -1,12 +1,6 @@
 module.exports = {
-  plugins: ['prettier', 'react', '@typescript-eslint', 'react-hooks'],
-  extends: [
-    'prettier',
-    'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:react-hooks/recommended',
-  ],
-  parser: '@typescript-eslint/parser',
+  plugins: ['prettier', 'react', 'react-hooks'],
+  extends: ['prettier', 'plugin:react/recommended', 'plugin:react-hooks/recommended'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -38,9 +32,6 @@ module.exports = {
     'no-console': 'warn',
     'no-undef': 'warn',
     'react/prop-types': 'off',
-    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
-    // '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
     'react/self-closing-comp': [
       'error',
       {
