@@ -1,11 +1,12 @@
 import React from 'react';
 import { useQuery } from 'react-query';
-import { fetchHeroes } from '../networks/api';
+import { RQfetchHeroes } from '../networks/api';
 
 export const RQSuperHeroesPage = () => {
-  const { isLoading, data } = useQuery('super-heroes', fetchHeroes);
+  const { isLoading, data, isError, error } = useQuery('super-heroes', RQfetchHeroes);
 
-  if (isLoading) <h2>Loading...</h2>;
+  if (isLoading) return <h2>Loading...</h2>;
+  if (isError) return <h2>{error.message}</h2>;
   return (
     <>
       <h2>React Query Super Heroes Page</h2>
