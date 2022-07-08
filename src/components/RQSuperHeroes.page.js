@@ -1,6 +1,5 @@
 import React from 'react';
-import { useQuery } from 'react-query';
-import { RQfetchHeroes } from '../networks/api';
+import { useSuperHeroesData } from '../hooks/useSuperHeroesData';
 
 export const RQSuperHeroesPage = () => {
   const onSuccess = data => {
@@ -11,14 +10,7 @@ export const RQSuperHeroesPage = () => {
     console.log('Perform side effect after encounting error');
   };
 
-  const { isLoading, data, isError, error, isFetching, refetch } = useQuery('super-heroes', RQfetchHeroes, {
-    onSuccess,
-    onError,
-    select: data => {
-      const superHeroesNames = data.data.map(hero => hero.name);
-      return superHeroesNames;
-    },
-  });
+  const { isLoading, data, isError, error, isFetching, refetch } = useSuperHeroesData(onError, onSuccess);
 
   if (isLoading || isFetching) return <h2>Loading...</h2>;
   if (isError) return <h2>{error.message}</h2>;
@@ -26,11 +18,8 @@ export const RQSuperHeroesPage = () => {
     <>
       <h2>React Query Super Heroes Page</h2>
       <button onClick={refetch}>Fetch Heroes</button>
-      {/* {data?.data.map(hero => {
-        return <div key={hero.id}>{hero.name}</div>;
-      })} */}
-      {data.map(heroName => {
-        return <div key={heroName}>{heroName}</div>;
+      {data.map(heroEgo => {
+        return <div key={heroEgo}>{heroEgo}</div>;
       })}
     </>
   );
