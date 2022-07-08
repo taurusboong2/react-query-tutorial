@@ -3,8 +3,17 @@ import { useQuery } from 'react-query';
 import { RQfetchHeroes } from '../networks/api';
 
 export const RQSuperHeroesPage = () => {
+  const onSuccess = data => {
+    console.log('Perform side effect after data fetching', data);
+  };
+
+  const onError = error => {
+    console.log('Perform side effect after encounting error', error);
+  };
+
   const { isLoading, data, isError, error, isFetching, refetch } = useQuery('super-heroes', RQfetchHeroes, {
-    enabled: false,
+    onSuccess,
+    onError,
   });
 
   if (isLoading || isFetching) return <h2>Loading...</h2>;
