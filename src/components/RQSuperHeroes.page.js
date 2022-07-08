@@ -4,10 +4,8 @@ import { RQfetchHeroes } from '../networks/api';
 
 export const RQSuperHeroesPage = () => {
   const { isLoading, data, isError, error, isFetching } = useQuery('super-heroes', RQfetchHeroes, {
-    cacheTime: 2000,
+    staleTime: 0,
   });
-
-  console.log({ isLoading, isFetching });
 
   if (isLoading) return <h2>Loading...</h2>;
   if (isError) return <h2>{error.message}</h2>;
