@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import { fetchHeroes } from '../networks/api';
 
 export const SuperHeroesPage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -7,7 +7,7 @@ export const SuperHeroesPage = () => {
 
   useEffect(() => {
     (async () => {
-      const response = await axios.get('http://localhost:4000/superheroes');
+      const response = await fetchHeroes();
       setData(response.data);
       setIsLoading(false);
     })();
