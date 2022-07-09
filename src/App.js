@@ -10,6 +10,7 @@ import { SuperHeroPage } from './components/SuperHero.page';
 import { ParallelQueriesPage } from './components/ParallelQueries.page';
 import { DynamicParallelPage } from './components/DynamicParallel.page';
 import { DependentQueriesPage } from './components/DependentQueries.page';
+import { PaginatedQueriesPage } from './components/PaginatedQueries.page';
 
 const queryClient = new QueryClient();
 
@@ -38,6 +39,9 @@ const App = () => {
               <li>
                 <Link to="/rq-dependent">dependent queries</Link>
               </li>
+              <li>
+                <Link to="/rq-colors">paginated Queries</Link>
+              </li>
             </ul>
           </nav>
         </div>
@@ -50,6 +54,7 @@ const App = () => {
           <Route path="/rq-parallel" element={<ParallelQueriesPage />} />
           <Route path="/rq-dynamicparallel" element={<DynamicParallelPage heroIds={[1, 5]} />} />
           <Route path="/rq-dependent" element={<DependentQueriesPage id="aaa" />} />
+          <Route path="/rq-colors" element={<PaginatedQueriesPage />} />
         </Routes>
       </BrowserRouter>
       <ReactQueryDevtools initialIsOpen={false} position="bottom-right" />

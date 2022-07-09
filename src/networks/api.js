@@ -35,3 +35,8 @@ export const fetchStacksByUserName = async id => {
   const response = await axios.get(`http://localhost:4000/stacks/${id}`);
   return response;
 };
+
+export const fetchColors = pageNumber => {
+  const response = axios.get(`http://localhost:4000/colors?_limit=2&_page=${pageNumber}`);
+  return response;
+};

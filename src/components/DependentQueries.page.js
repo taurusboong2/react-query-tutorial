@@ -12,7 +12,7 @@ export const DependentQueriesPage = ({ id }) => {
 
   return (
     <>
-      <h1>DependentQueriePpage</h1>
+      <h1>DependentQueriespage</h1>
       <h3>{userName}</h3>
     </>
   );
