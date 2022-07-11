@@ -1,5 +1,5 @@
-import { useQuery } from 'react-query';
-import { RQfetchHeroes } from '../networks/api';
+import { useQuery, useMutation } from 'react-query';
+import { RQfetchHeroes, createNewHero } from '../networks/api';
 
 export const useSuperHeroesData = (onSuccess, onError) => {
   return useQuery('super-heroes', RQfetchHeroes, {
@@ -10,4 +10,8 @@ export const useSuperHeroesData = (onSuccess, onError) => {
     //   return superHeroesAlterEgo;
     // },
   });
+};
+
+export const useAddSuperHeroData = () => {
+  return useMutation(createNewHero);
 };

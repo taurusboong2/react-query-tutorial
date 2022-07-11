@@ -14,59 +14,77 @@
       "id": 3,
       "name": "Wonder Woman",
       "alterEgo": "Princess Diana"
-    },{
+    },
+    {
       "id": 4,
       "name": "Aqua Man",
       "alterEgo": "Arthur Curry"
-    },{
+    },
+    {
       "id": 5,
       "name": "Flash",
       "alterEgo": "Arthur Curry"
-    }
-  ],
-  "friends" : [
+    },
     {
-      "id" : 1,
-      "name" : "이순신"
-    },{
-      "id" : 2,
-      "name" : "김좌진"
-    },{
-      "id" : 3,
-      "name" : "권율"
+      "name": "The Flash",
+      "alterEgo": "Barry Allen",
+      "id": 6
     }
   ],
-  "users" : [
+  "friends": [
+    {
+      "id": 1,
+      "name": "이순신"
+    },
+    {
+      "id": 2,
+      "name": "김좌진"
+    },
+    {
+      "id": 3,
+      "name": "권율"
+    }
+  ],
+  "users": [
     {
       "id": "aaa",
-      "username" : "TauBoong"
+      "username": "TauBoong"
     }
   ],
-  "stacks" : [
+  "stacks": [
     {
       "id": "TauBoong",
-      "stacks": ["react", "JS", "TS"]
+      "stacks": [
+        "react",
+        "JS",
+        "TS"
+      ]
     }
   ],
-  "colors" : [
+  "colors": [
     {
-      "id" : 1,
-      "label" : "red"
-    },{
-      "id" : 2,
-      "label" : "blue"
-    },{
-      "id" : 3,
-      "label" : "green"
-    },{
-      "id" : 4,
-      "label" : "yellow"
-    },{
-      "id" : 5,
-      "label" : "black"
-    },{
-      "id" : 6,
-      "label" : "white"
+      "id": 1,
+      "label": "red"
+    },
+    {
+      "id": 2,
+      "label": "blue"
+    },
+    {
+      "id": 3,
+      "label": "green"
+    },
+    {
+      "id": 4,
+      "label": "yellow"
+    },
+    {
+      "id": 5,
+      "label": "black"
+    },
+    {
+      "id": 6,
+      "label": "white"
     }
   ]
 }

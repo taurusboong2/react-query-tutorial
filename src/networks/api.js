@@ -45,3 +45,8 @@ export const fetchInfiniteColors = ({ pageParam = 1 }) => {
   const response = axios.get(`http://localhost:4000/colors?_limit=2&_page=${pageParam}`);
   return response;
 };
+
+export const createNewHero = hero => {
+  const response = axios.post(BASE_URL, hero);
+  return response;
+};
