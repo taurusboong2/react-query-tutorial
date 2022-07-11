@@ -24,7 +24,7 @@ export const RQSuperHeroesPage = () => {
     addHero(hero);
   };
 
-  if (isLoading || isFetching) return <h2>Loading...</h2>;
+  if (isLoading) return <h2>Loading...</h2>;
   if (isError) return <h2>{error.message}</h2>;
   return (
     <>
