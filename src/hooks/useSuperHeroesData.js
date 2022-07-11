@@ -1,4 +1,4 @@
-import { useQuery, useMutation } from 'react-query';
+import { useQuery, useMutation, useQueryClient } from 'react-query';
 import { RQfetchHeroes, createNewHero } from '../networks/api';
 
 export const useSuperHeroesData = (onSuccess, onError) => {
@@ -13,5 +13,10 @@ export const useSuperHeroesData = (onSuccess, onError) => {
 };
 
 export const useAddSuperHeroData = () => {
-  return useMutation(createNewHero);
+  const queryClient = useQueryClient();
+  return useMutation(createNewHero, {
+    onSuccess: () => {
+      queryClient.invalidateQueries('super-heroes');
+    },
+  });
 };
