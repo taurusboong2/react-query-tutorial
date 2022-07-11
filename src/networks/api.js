@@ -40,3 +40,8 @@ export const fetchColors = pageNumber => {
   const response = axios.get(`http://localhost:4000/colors?_limit=2&_page=${pageNumber}`);
   return response;
 };
+
+export const fetchInfiniteColors = ({ pageParam = 1 }) => {
+  const response = axios.get(`http://localhost:4000/colors?_limit=2&_page=${pageParam}`);
+  return response;
+};
